@@ -20,6 +20,7 @@ export const SidebarChats = () => {
     <div className="flex flex-col w-full px-[8px] gap-[3px] pt-16 ">
       {fetchedChats &&
         fetchedChats.length > 0 &&
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         fetchedChats.map((data: any) => (
           <ChatReference
             ImageUrl={"/profile.jpg"}

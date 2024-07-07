@@ -4,16 +4,24 @@ import { UserInput } from "./UserInput";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Messages } from "./Messages";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
+
+type ChatMessage = {
+  id: string;
+  sender: {
+    id: string;
+    name: string;
+  };
+  message: string;
+  timestamp: string;
+};
 
 export const MainChat = () => {
   const params = useParams();
   console.log(params.chatId);
-  const [chatDetail, setChatDetail] = useState([]);
-  const location = useLocation();
+  const [chatDetail, setChatDetail] = useState<ChatMessage[]>([]);
+  // const location = useLocation();
   const [loading, setLoading] = useState(false);
-
-  // const [selectedCharUser, setSelectedCharUser] = useState();
 
   const fetchChatDetail = async () => {
     if (params.chatId) {
@@ -25,23 +33,12 @@ export const MainChat = () => {
         console.log(response.data.data);
         setChatDetail(response.data.data);
         setLoading(false);
-        // GetselectedUserDetails(response.data.data); // Pass the fetched data to GetselectedUserDetails
       } catch (error) {
         console.error("Error fetching chat details:", error);
         setLoading(false);
       }
     }
   };
-
-  // const GetselectedUserDetails = (chatData) => {
-  //   if (params.chatId && chatData.length > 0) {
-  //     const selected = chatData.filter(
-  //       (data) => data.sender.name === chatData[0].sender.name
-  //     );
-  //     console.log(selected);
-  //     setSelectedCharUser(selected);
-  //   }
-  // };
 
   useEffect(() => {
     fetchChatDetail();

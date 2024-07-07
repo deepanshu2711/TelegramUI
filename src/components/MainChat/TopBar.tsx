@@ -3,10 +3,10 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Avatar } from "@mui/material";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const TopBar = ({ creator }: { creator: string }) => {
-  const location = useLocation();
+  // const location = useLocation();
   function stringToColor(string: string) {
     let hash = 0;
     let i;

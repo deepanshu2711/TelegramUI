@@ -1,8 +1,10 @@
 import CheckIcon from "@mui/icons-material/Check";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const Messages = ({ otherUserId, chatDetail }: any) => {
   return (
     <div className={`flex flex-col-reverse w-full h-full overflow-y-auto `}>
       {chatDetail.length > 0 &&
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         chatDetail.map((message: any) => (
           <>
             <div

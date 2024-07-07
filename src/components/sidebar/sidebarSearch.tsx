@@ -11,10 +11,10 @@ import BookmarkIcon from "@mui/icons-material/Bookmark";
 import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { Avatar, Box, Drawer, Popover, Typography } from "@mui/material";
+import { Avatar, Box, Drawer, Popover } from "@mui/material";
 import { deepPurple } from "@mui/material/colors";
 import { useState } from "react";
-import { useAsyncError } from "react-router-dom";
+// import { useAsyncError } from "react-router-dom";
 
 const data = [
   {
