@@ -65,7 +65,7 @@ export const MainChat = () => {
       )}
       <div className="flex flex-col w-[100%] h-screen justify-between">
         <div className="flex flex-col lg:w-[60%] w-[90%] pb-[20px] self-center justify-between h-full">
-          <div className="w-full h-[600px]">
+          <div className="w-full h-[90%]">
             <Messages
               otherUserId={chatDetail[0]?.sender?.id}
               chatDetail={chatDetail}

@@ -3,7 +3,7 @@ import AttachFileIcon from "@mui/icons-material/AttachFile";
 import MicIcon from "@mui/icons-material/Mic";
 export const UserInput = () => {
   return (
-    <div className="flex  items-center justify-center mt-5 ">
+    <div className="flex sticky bottom-5 items-center justify-center mt-5 ">
       <div className="flex items-center  w-full gap-3">
         <div className="bg-[#212121] rounded-xl p-2 flex-1 flex items-center">
           <SentimentSatisfiedAltIcon className="text-[#959595] hover:text-[#766AC8] cursor-pointer" />
